@@ -51,6 +51,6 @@
 	<key>LSSupportsOpeningDocumentsInPlace</key>
 	<true/>
 	<key>UIFileSharingEnabled</key>
-	<true>
+	<true/>
 </dict>
 </plist>
