@@ -797,7 +797,7 @@ class _SettingPageState extends State<SettingPage> {
 
                         String savename = "$fileName.keys";
                         String savePath = "$dir/$savename";
-                        print(savePath);
+                        print("Save Path $savePath");
                         //output:  /storage/emulated/0/Download/banner.png
                         setState(() {
                           _isLoading = true;
@@ -870,7 +870,7 @@ class _SettingPageState extends State<SettingPage> {
     if (Platform.isAndroid) {
       return (await DownloadsPathProvider.downloadsDirectory)?.path;
     } else if (Platform.isIOS) {
-      return (await getApplicationDocumentsDirectory()).path;
+      return (await DownloadsPathProvider.downloadsDirectory)?.path;
     } else {
       return null;
     }

@@ -79,7 +79,7 @@ class _NewTripPageState extends State<NewTripPage> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
 
-    List<DataColumn>  getColumns() {
+    List<DataColumn> getColumns() {
       return newData.isNotEmpty
           ? newData.first.keys
               .map((String key) => DataColumn(
@@ -709,7 +709,7 @@ class _NewTripPageState extends State<NewTripPage> {
     if (Platform.isAndroid) {
       return (await DownloadsPathProvider.downloadsDirectory)?.path;
     } else if (Platform.isIOS) {
-      return (await getApplicationDocumentsDirectory()).path;
+      return (await DownloadsPathProvider.downloadsDirectory)?.path;
     } else {
       return null;
     }
